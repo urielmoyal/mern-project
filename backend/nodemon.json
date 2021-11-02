@@ -1,0 +1,9 @@
+{
+    "env":{
+        "DB_USER":"uriel",
+        "DB_PASSWORD":"LiCHGsV8dUJsCvT7",
+        "COLLECTION_NAME":"places",
+        "GOOGLE_API_KEY":"AIzaSyBy0lGtvuxcaeQ9s2ZNTE0XJg4wsbqqNqE",
+        "JWT_PRIVATE_KEY":"<Enter_Your_privet_key>"
+    }
+}
