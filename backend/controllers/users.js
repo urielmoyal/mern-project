@@ -28,7 +28,7 @@ const login = async (req, res, next) => {
     loginUser = await User.findOne({ email: email }).exec();
   } catch (err) {
     console.log(err);
-    return next(new HttpError("Field to login please try again later1", 500));
+    return next(new HttpError("Field to login please try again later", 500));
   }
 
   if (!loginUser) {
@@ -39,7 +39,7 @@ const login = async (req, res, next) => {
     isValidPassword = bcryptjs.compare(password, loginUser.password);
   } catch (error) {
     console.log(error);
-    return next(new HttpError("Field to login please try again later2", 500));
+    return next(new HttpError("Field to login please try again later", 500));
   }
 
   if (!isValidPassword) {
@@ -56,7 +56,7 @@ const login = async (req, res, next) => {
     );
   } catch (error) {
     console.log(error);
-    return next(new HttpError("Field to login please try again later3", 500));
+    return next(new HttpError("Field to login please try again later", 500));
   }
 
   res.status(201).json({ userId: loginUser._id, email: loginUser.email, token: token });
